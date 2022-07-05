@@ -1,17 +1,28 @@
 #ifndef VEHICULO_H
-#include <string>
+#define VEHICULO_H
 
+#include <string>
+#include <iostream>
 using std::string;
+using std::cout;
+using std::endl;
 
 class Vehiculo
 {
     public:
-        Vehiculo();
-        Vehiculo(string dueño, string fabricant, string serie);
-        string encender();
-        string avanzar();
-        string apagar();
-    private:
+        Vehiculo(string dueño, string fabricante, string serie): dueño{dueño}, fabricante{fabricante}, serie{serie}{
+        }
+        void encender(){
+            cout << "Encendiendo vehiculo" << endl;
+        }
+        void avanzar(){
+            cout << "Vehiculo avanzando" << endl;
+        }
+        void apagar(){
+            cout << "Apagando vehiculo" << endl;
+
+        }
+    protected:
         string dueño;
         string fabricante;
         string serie;
